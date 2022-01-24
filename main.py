@@ -1,3 +1,6 @@
+# This function finds a path from start to the end of the tree by checking if each node has been
+# visited while going down each node
+# AdjTable is a dictionary 
 def computeBFStree(AdjTable, start):
     # define some variables etc.
     done = False
@@ -28,6 +31,9 @@ def computeBFStree(AdjTable, start):
 
     return tree
 
+# computeBFSpath finds the shortest path from start to goal by checking each child node and labeling its
+# parent node, and backtracks its by going to each parent node until reached the start node
+# AdjTable is a dictionary
 def computeBFSpath(AdjTable, start, goal):
     if type(AdjTable) != dict:
         return 'AdjTable is invalid'
